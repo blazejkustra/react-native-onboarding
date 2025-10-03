@@ -17,4 +17,18 @@ const config = withMetroConfig(getDefaultConfig(__dirname), {
 
 config.resolver.unstable_enablePackageExports = true;
 
+// Add watchFolders to include the parent directory for asset resolution
+config.watchFolders = [root];
+
+// Configure asset extensions
+config.resolver.assetExts = [
+  ...config.resolver.assetExts,
+  'png',
+  'jpg',
+  'jpeg',
+  'gif',
+  'webp',
+  'svg',
+];
+
 module.exports = config;
