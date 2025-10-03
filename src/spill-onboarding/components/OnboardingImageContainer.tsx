@@ -49,7 +49,7 @@ function OnboardingImageContainer({
   const extraPadding = Platform.OS === 'web' ? 16 : 0;
   const { width: screenWidth } = useWindowDimensions();
 
-  // bottom panel height (intro vs step)
+  // bottom panel height (intro or step)
   const bottomPanelHeight = (currentStep ? stepPanel : introPanel).height || 0;
 
   /**
