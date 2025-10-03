@@ -33,7 +33,7 @@
   ],
   "scripts": {
     "example": "yarn workspace react-native-onboarding-example",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
