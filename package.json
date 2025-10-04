@@ -1,6 +1,6 @@
 {
   "name": "@blazejkustra/react-native-onboarding",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Onboarding/tutorial flow for React Native.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
