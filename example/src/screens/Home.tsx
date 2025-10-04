@@ -59,6 +59,11 @@ export default function Home({ navigation }: Props) {
           title="Gradient Background"
           onPress={() => navigation.navigate('OnboardingGradient')}
         />
+        <View style={styles.spacer} />
+        <Button
+          title="Checklist Onboarding"
+          onPress={() => navigation.navigate('OnboardingChecklist')}
+        />
       </View>
 
       <View style={styles.footer}>

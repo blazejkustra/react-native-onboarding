@@ -19,6 +19,7 @@ import { useTheme } from '../../utils/ThemeContext';
 import useMeasureHeight from '../hooks/useMeasureHeight';
 import type { Theme } from '../../utils/theme';
 import type { OnboardingStep } from '../types';
+import { ExpoImage } from '../adapters/expo-image';
 
 interface OnboardingImageContainerProps {
   currentStep: OnboardingStep | undefined;
@@ -131,11 +132,21 @@ function OnboardingImageContainer({
       {currentStepImage && (
         <Animated.View style={[styles.imageWrapper, imageWrapperAnimation]}>
           <Animated.View style={[styles.image, imageAnimation]} ref={image.ref}>
-            <Image
-              source={currentStepImage}
-              resizeMode="contain"
-              fadeDuration={0}
-            />
+            {ExpoImage ? (
+              <ExpoImage
+                source={currentStepImage}
+                contentFit="contain"
+                transition={0}
+                style={styles.imageStyle}
+              />
+            ) : (
+              <Image
+                source={currentStepImage}
+                resizeMode="contain"
+                fadeDuration={0}
+                style={styles.imageStyle}
+              />
+            )}
           </Animated.View>
         </Animated.View>
       )}
@@ -162,5 +173,9 @@ const createStyles = (theme: Theme) =>
       alignSelf: 'center',
       alignItems: 'center',
       overflow: 'hidden',
+    },
+    imageStyle: {
+      width: 300,
+      height: 600,
     },
   });
