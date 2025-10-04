@@ -1,7 +1,5 @@
 https://github.com/user-attachments/assets/bb51a0c3-15be-42b6-b20d-c33c29b84bc7
 
-<!-- ![Banner](assets/banner.png) -->
-
 # @blazejkustra/react-native-onboarding
 
 ✨ **Beautiful, customizable onboarding/tutorial flows** for React Native — with smooth animations, flexible theming, and highly customizable components.

@@ -38,6 +38,8 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
     "prepare": "bob build",
+    "prepack": "sed -i '' '1s|.*|![Banner](assets/banner.png)|' README.md",
+    "postpack": "git checkout README.md",
     "release": "release-it --only-version"
   },
   "keywords": [
