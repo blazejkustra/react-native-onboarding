@@ -6,16 +6,21 @@ import {
   type OnboardingFonts,
   type OnboardingIntroPanelProps,
   type OnboardingStepPanelProps,
+  type OnboardingStep,
 } from './spill-onboarding/types';
 import SpillOnboarding from './spill-onboarding';
+import { Platform } from 'react-native';
+import React from 'react';
 
 function Onboarding({ colors, fonts, ...props }: OnboardingProps) {
+  const SafeArea = Platform.OS === 'web' ? React.Fragment : SafeAreaProvider;
+
   return (
-    <SafeAreaProvider>
+    <SafeArea>
       <ThemeProvider colors={colors} fonts={fonts}>
         <SpillOnboarding {...props} />
       </ThemeProvider>
-    </SafeAreaProvider>
+    </SafeArea>
   );
 }
 
@@ -26,4 +31,5 @@ export type {
   OnboardingFonts,
   OnboardingIntroPanelProps,
   OnboardingStepPanelProps,
+  OnboardingStep,
 };

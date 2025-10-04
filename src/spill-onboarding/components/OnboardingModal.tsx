@@ -55,9 +55,9 @@ const createStyles = (theme: Theme, height: number, width: number) =>
       bottom: 0,
     },
     webModal: {
-      width: Math.min(width - 32, 500),
-      height: Math.min(height - 32, 800),
-      borderRadius: 28,
+      width: Math.min(width, 500),
+      height: Math.min(height, 800),
+      borderRadius: width > 500 ? 28 : 0,
       shadowColor: '#000',
       shadowOffset: {
         width: 0,

@@ -14,7 +14,6 @@ import OnboardingStepContainer from './components/OnboardingStepContainer';
 import OnboardingImageContainer from './components/OnboardingImageContainer';
 import OnboardingModal from './components/OnboardingModal';
 import { type OnboardingProps } from './types';
-import { useWindowDimensions } from 'react-native';
 import useMeasureHeight from './hooks/useMeasureHeight';
 import { type Theme } from '../utils/theme';
 
@@ -32,7 +31,6 @@ function SpillOnboarding({
   skipButton,
 }: OnboardingProps) {
   const { theme } = useTheme();
-  const { width: screenWidth } = useWindowDimensions();
 
   const styles = useMemo(() => createStyles(theme), [theme]);
   const backgroundSpillProgress = useSharedValue(0);
@@ -192,7 +190,7 @@ function SpillOnboarding({
   );
 
   // On web, wrap in modal; on mobile, render directly
-  if (Platform.OS === 'web' && screenWidth >= 600 && wrapInModalOnWeb) {
+  if (Platform.OS === 'web' && wrapInModalOnWeb) {
     return (
       <OnboardingModal onSkip={onSkip}>{onboardingContent}</OnboardingModal>
     );
