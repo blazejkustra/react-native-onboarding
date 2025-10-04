@@ -2,7 +2,7 @@ https://github.com/user-attachments/assets/bb51a0c3-15be-42b6-b20d-c33c29b84bc7
 
 <!-- ![Banner](assets/banner.png) -->
 
-# react-native-onboarding
+# @blazejkustra/react-native-onboarding
 
 ✨ **Beautiful, customizable onboarding/tutorial flows** for React Native — with smooth animations, flexible theming, and highly customizable components.
 
@@ -15,7 +15,7 @@ https://github.com/user-attachments/assets/bb51a0c3-15be-42b6-b20d-c33c29b84bc7
 
 ## Inspired by [Private Mind App](https://github.com/software-mansion-labs/private-mind)
 
-A private AI app that runs entirely offline on your device, with no data sent to the cloud and no internet connection required. Private Mind represents a new era of AI—powerful, personal, and completely private.
+A private AI app that runs entirely offline on your device, with no data sent to the cloud and no internet connection required. Private Mind represents a new era of AI! Powerful, personal, and completely private.
 
 ![Banner](assets/private-mind.png)
 
@@ -46,7 +46,7 @@ npm install react-native-svg
 You can use Onboarding component with default styles just by passing required props to the component:
 
 ```tsx
-import Onboarding from 'react-native-onboarding';
+import Onboarding from '@blazejkustra/react-native-onboarding';
 
 function MyOnboarding() {
   return (

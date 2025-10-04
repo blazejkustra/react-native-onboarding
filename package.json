@@ -1,5 +1,5 @@
 {
-  "name": "react-native-onboarding",
+  "name": "@blazejkustra/react-native-onboarding",
   "version": "0.1.0",
   "description": "Onboarding/tutorial flow for React Native.",
   "main": "./lib/module/index.js",
@@ -32,7 +32,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-onboarding-example",
+    "example": "yarn workspace @blazejkustra/react-native-onboarding-example",
     "test": "jest --passWithNoTests",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
