@@ -6,7 +6,7 @@ import Reanimated, {
   FadeOut,
   FadeOutDown,
 } from 'react-native-reanimated';
-import CloseButton from '../buttons/CloseButton';
+import SkipButton from '../buttons/SkipButton';
 import { useTheme } from '../../utils/ThemeContext';
 import type { Theme } from '../../utils/theme';
 import type { OnboardingStep } from '../types';
@@ -15,10 +15,10 @@ interface OnboardingStepContainerProps {
   currentStep: OnboardingStep | undefined;
   showCloseButton?: boolean;
   animationDuration: number;
-  onSkip: () => void;
+  onSkip?: () => void;
   ref: React.RefObject<any>;
   renderStepContent: () => React.ReactNode;
-  closeButton?: ({ onPress }: { onPress: () => void }) => ReactNode;
+  skipButton?: ({ onPress }: { onPress: () => void }) => ReactNode;
 }
 
 function OnboardingStepContainer({
@@ -28,7 +28,7 @@ function OnboardingStepContainer({
   onSkip,
   ref,
   renderStepContent,
-  closeButton,
+  skipButton,
 }: OnboardingStepContainerProps) {
   const { theme } = useTheme();
   const styles = useMemo(() => createStyles(theme), [theme]);
@@ -39,16 +39,16 @@ function OnboardingStepContainer({
 
   return (
     <>
-      {showCloseButton && (
+      {showCloseButton && onSkip && (
         <Reanimated.View
           entering={FadeIn.duration(animationDuration)}
           exiting={FadeOut.duration(animationDuration)}
           style={styles.close}
         >
-          {closeButton ? (
-            closeButton({ onPress: onSkip })
+          {skipButton ? (
+            skipButton({ onPress: onSkip })
           ) : (
-            <CloseButton onPress={onSkip} />
+            <SkipButton onPress={onSkip} />
           )}
         </Reanimated.View>
       )}

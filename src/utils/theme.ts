@@ -1,28 +1,27 @@
 import type { EdgeInsets } from 'react-native-safe-area-context';
-import { fontFamily } from './fontStyles';
 
 export const defaultTheme = {
   bg: {
-    primary: '#3D61D6',
-    secondary: '#ffffff',
-    label: '#e6e7eb',
-    accent: '#020f3c',
+    primary: '#007AFF',
+    secondary: '#FFFFFF',
+    label: '#F2F2F7',
+    accent: '#1C1C1E',
   },
   text: {
-    primary: '#020f3c',
-    secondary: 'rgba(2, 15, 60, 0.8)',
-    contrast: '#ffffff',
+    primary: '#1C1C1E',
+    secondary: '#8E8E93',
+    contrast: '#FFFFFF',
   },
   fonts: {
-    introTitle: fontFamily.medium,
-    introSubtitle: fontFamily.medium,
-    introButton: fontFamily.medium,
-    stepLabel: fontFamily.medium,
-    stepTitle: fontFamily.medium,
-    stepDescription: fontFamily.regular,
-    stepButton: fontFamily.medium,
-    primaryButton: fontFamily.medium,
-    secondaryButton: fontFamily.medium,
+    introTitle: 'System',
+    introSubtitle: 'System',
+    introButton: 'System',
+    stepLabel: 'System',
+    stepTitle: 'System',
+    stepDescription: 'System',
+    stepButton: 'System',
+    primaryButton: 'System',
+    secondaryButton: 'System',
   },
 };
 

@@ -1,8 +1,3 @@
-export const fontFamily = {
-  regular: 'System',
-  medium: 'System',
-};
-
 export const fontSizes = {
   xxl: 34,
   xl: 22,

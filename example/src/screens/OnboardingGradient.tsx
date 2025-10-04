@@ -213,17 +213,17 @@ export default function OnboardingGradient({ navigation }: Props) {
       onStepChange={() => {}}
       showCloseButton
       showBackButton
-      closeButton={({ onPress }) => <CloseButton onPress={onPress} />}
+      skipButton={({ onPress }) => <SkipButton onPress={onPress} />}
     />
   );
 }
 
 // Custom close button component
-function CloseButton({ onPress }: { onPress: () => void }) {
+function SkipButton({ onPress }: { onPress: () => void }) {
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={styles.closeButton}
+      style={styles.skipButton}
       activeOpacity={0.8}
     >
       <LinearGradient
@@ -343,7 +343,7 @@ const styles = StyleSheet.create({
   },
 
   // Close button styles
-  closeButton: {
+  skipButton: {
     width: 40,
     height: 40,
     overflow: 'hidden',

@@ -25,10 +25,11 @@ function SpillOnboarding({
   onComplete,
   onSkip,
   onStepChange: onStepChangeProps,
-  showCloseButton,
-  showBackButton,
+  showCloseButton = true,
+  showBackButton = true,
+  wrapInModalOnWeb = true,
   background,
-  closeButton,
+  skipButton,
 }: OnboardingProps) {
   const { theme } = useTheme();
   const { width: screenWidth } = useWindowDimensions();
@@ -43,7 +44,7 @@ function SpillOnboarding({
   const onStepChange = useCallback(
     (stepNumber: number) => {
       setStep(stepNumber);
-      onStepChangeProps(stepNumber);
+      onStepChangeProps?.(stepNumber);
     },
     [onStepChangeProps]
   );
@@ -185,13 +186,13 @@ function SpillOnboarding({
         renderStepContent={renderStepContent}
         onSkip={onSkip}
         ref={stepPanel.ref}
-        closeButton={closeButton}
+        skipButton={skipButton}
       />
     </View>
   );
 
   // On web, wrap in modal; on mobile, render directly
-  if (Platform.OS === 'web' && screenWidth >= 600) {
+  if (Platform.OS === 'web' && screenWidth >= 600 && wrapInModalOnWeb) {
     return (
       <OnboardingModal onSkip={onSkip}>{onboardingContent}</OnboardingModal>
     );

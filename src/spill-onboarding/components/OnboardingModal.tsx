@@ -10,7 +10,7 @@ import { useTheme } from '../../utils/ThemeContext';
 import type { Theme } from '../../utils/theme';
 
 interface OnboardingModalProps {
-  onSkip: () => void;
+  onSkip?: () => void;
   children: React.ReactNode;
 }
 

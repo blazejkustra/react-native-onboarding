@@ -8,7 +8,7 @@ interface Props {
   onPress: () => void;
 }
 
-function CloseButton({ onPress }: Props) {
+function SkipButton({ onPress }: Props) {
   const { theme } = useTheme();
   const styles = useMemo(() => createStyles(theme), [theme]);
 
@@ -19,7 +19,7 @@ function CloseButton({ onPress }: Props) {
   );
 }
 
-export default CloseButton;
+export default SkipButton;
 
 const createStyles = (theme: Theme) =>
   StyleSheet.create({

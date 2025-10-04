@@ -10,20 +10,6 @@ const STORAGE_KEY = 'onboarding_finished';
 export default function OnboardingDefault({ navigation }: Props) {
   return (
     <Onboarding
-      colors={{
-        background: {
-          primary: '#3D61D6',
-          secondary: '#ffffff',
-          label: '#e6e7eb',
-          accent: '#020f3c',
-        },
-        text: {
-          primary: '#020f3c',
-          secondary: 'rgba(2, 15, 60, 0.8)',
-          contrast: '#ffffff',
-        },
-      }}
-      fonts="System"
       animationDuration={300}
       introPanel={{
         title: 'Your private AI mind.',

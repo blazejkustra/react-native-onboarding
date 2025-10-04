@@ -209,22 +209,25 @@ export interface OnboardingProps {
   onComplete: () => void;
 
   /** Called when the user skips the onboarding. */
-  onSkip: () => void;
+  onSkip?: () => void;
 
   /** Notifies consumers when the active step index changes. */
-  onStepChange: (stepIndex: number) => void;
+  onStepChange?: (stepIndex: number) => void;
 
   /** Whether to show the close button in the header. */
-  showCloseButton: boolean;
+  showCloseButton?: boolean;
 
   /** Whether to show a back button on steps */
-  showBackButton: boolean;
+  showBackButton?: boolean;
+
+  /** Whether to wrap the onboarding in a modal on web. */
+  wrapInModalOnWeb?: boolean;
 
   /** Optional custom background element rendered behind content. */
   background?: () => ReactNode;
 
   /** Optional custom close button renderer. */
-  closeButton?: ({ onPress }: { onPress: () => void }) => ReactNode;
+  skipButton?: ({ onPress }: { onPress: () => void }) => ReactNode;
 
   /** Theme colors to use for styling. */
   colors?: OnboardingColors;
