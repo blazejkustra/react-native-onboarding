@@ -338,6 +338,8 @@ skipButton={({ onPress }) => (
 ### Image Consistency
 Use images with the same dimensions for the best visual effect. This prevents layout shifts and creates smooth transitions between steps.
 
+**Image creator**: Use this [Figma Community template](https://www.figma.com/community/file/1556597720381753708) to design consistent onboarding illustrations and export assets with the recommended dimensions.
+
 ### Persistent Storage
 Save onboarding completion state to persistent storage (MMKV, AsyncStorage) to prevent users from seeing the onboarding again after completion.
 
