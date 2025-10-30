@@ -49,14 +49,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blazejkustra/react-native-onboarding.git"
+    "url": "git+https://github.com/software-mansion-labs/react-native-onboarding.git"
   },
   "author": "Blazej Kustra <kustrablazej@gmail.com> (https://github.com/blazejkustra)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blazejkustra/react-native-onboarding/issues"
+    "url": "https://github.com/software-mansion-labs/react-native-onboarding/issues"
   },
-  "homepage": "https://github.com/blazejkustra/react-native-onboarding#readme",
+  "homepage": "https://github.com/software-mansion-labs/react-native-onboarding#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

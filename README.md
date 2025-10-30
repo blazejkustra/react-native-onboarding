@@ -1,6 +1,6 @@
 https://github.com/user-attachments/assets/bb51a0c3-15be-42b6-b20d-c33c29b84bc7
 
-# @blazejkustra/react-native-onboarding
+# react-native-onboarding
 
 ✨ **Beautiful, customizable onboarding/tutorial flows** for React Native — with smooth animations, flexible theming, and highly customizable components.
 
@@ -346,15 +346,20 @@ Save onboarding completion state to persistent storage (MMKV, AsyncStorage) to p
 ### Navigation
 On completion, navigate users to the main app to provide a smooth transition from onboarding to the core experience.
 
-
 ## 🤝 Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for development workflow and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for our code of conduct.
 
-## 📄 License
-
-MIT © [Blazej Kustra](https://github.com/blazejkustra)
-
 ---
 
 Built with [create-react-native-library](https://github.com/callstack/react-native-builder-bob) 🛠
+
+## React Native Onboarding is created by Software Mansion
+
+[![swm](https://logo.swmansion.com/logo?color=white&variant=desktop&width=150&tag=typegpu-github 'Software Mansion')](https://swmansion.com)
+
+Since 2012 [Software Mansion](https://swmansion.com) is a software agency with
+experience in building web and mobile apps. We are Core React Native
+Contributors and experts in dealing with all kinds of React Native issues. We
+can help you build your next dream product –
+[Hire us](https://swmansion.com/contact/projects?utm_source=typegpu&utm_medium=readme).
